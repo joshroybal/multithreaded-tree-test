@@ -10,7 +10,7 @@ class BST
 {
    public:
       BST() : root(0) {}
-      ~BST();
+      virtual ~BST();
       virtual int Height() const;
       int Size() const;
       int Minimum() const;
@@ -51,6 +51,7 @@ struct BST::Node
    Node* left;
    Node* right;
    Node(int n) : key(n), left(0), right(0) {}
+   virtual ~Node() {}
 };
 
 #endif
